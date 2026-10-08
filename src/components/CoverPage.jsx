@@ -143,7 +143,7 @@ export default function CoverPage() {
           <span>•</span>
           <span>🔗 sudhanshu-ray</span>
           <span>•</span>
-          <span>💻 Sudhanshu-Ray10</span>
+          <span>💻 m4nish-dev</span>
         </div>
       </div>
 

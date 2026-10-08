@@ -96,11 +96,11 @@ export default function BackCover() {
           }}>
             🔗 linkedin.com/in/sudhanshu-ray
           </a>
-          <a href="https://github.com/Sudhanshu-Ray10" target="_blank" rel="noopener noreferrer" style={{ 
+          <a href="https://github.com/m4nish-dev" target="_blank" rel="noopener noreferrer" style={{ 
             color: 'rgba(255,255,255,0.8)', 
             textDecoration: 'none' 
           }}>
-            💻 github.com/Sudhanshu-Ray10
+            💻 github.com/m4nish-dev
           </a>
         </div>
 
