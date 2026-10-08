@@ -294,7 +294,7 @@ body {
 }
 
 .inner-page .page-content {
-  padding: 40px 36px;
+  padding: 56px 36px;
 }
 
 /* Page number */
@@ -706,7 +706,7 @@ body {
   }
   
   .inner-page .page-content {
-    padding: 28px 24px;
+    padding: 40px 24px;
   }
 }
 
@@ -722,7 +722,7 @@ body {
   }
 
   .inner-page .page-content {
-    padding: 24px 20px;
+    padding: 32px 20px;
   }
 
   .section-header {
