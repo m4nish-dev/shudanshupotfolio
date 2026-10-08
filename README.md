@@ -1,16 +1,43 @@
-# React + Vite
+# 📖 Sudhanshu Ray | 3D Book Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A highly interactive, visually stunning developer portfolio designed to look and behave like a high-end, premium printed book. 
 
-Currently, two official plugins are available:
+Built with **React**, **Vite**, and **PageFlip**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+### 🌟 Live Demo
+**[View the Live Portfolio Here](https://m4nish-dev.github.io/shudanshupotfolio/)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+### ✨ Features
+- **Realistic 3D Page Flipping**: Smooth, physics-based page turning using `page-flip`.
+- **Cinematic Cover Design**: Autobiography-style editorial cover with dynamic textures and moody styling.
+- **Luxury Dossier Layouts**: Inner pages utilize beautiful cream & navy aesthetics with gold accents and minimalist SVG iconography.
+- **Fully Responsive**: The book dynamically scales and adjusts its margins to perfectly fit mobile, tablet, and desktop screens.
+- **Premium Typography**: Utilizes a mix of elegant serifs (Playfair Display) and clean monospaced fonts for a professional finish.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### 🛠️ Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/m4nish-dev/shudanshupotfolio.git
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+### 🚀 Deployment
+This project is configured to automatically deploy to GitHub Pages.
+To manually trigger a build and deployment to the `gh-pages` branch:
+```bash
+npm run deploy
+```
