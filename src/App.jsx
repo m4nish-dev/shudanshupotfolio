@@ -31,8 +31,8 @@ function App() {
         setIsMobile(currentIsMobile)
         const targetWidth = currentIsMobile ? 360 : 900
         const targetHeight = currentIsMobile ? 540 : 600
-        const paddingWidth = isMobile ? 20 : 40
-        const paddingHeight = isMobile ? 20 : 40
+        const paddingWidth = isMobile ? 40 : 100
+        const paddingHeight = isMobile ? 140 : 200
 
         const scaleX = (window.innerWidth - paddingWidth) / targetWidth
         const scaleY = (window.innerHeight - paddingHeight) / targetHeight
