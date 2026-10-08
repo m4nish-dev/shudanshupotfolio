@@ -1,111 +1,114 @@
 export default function CoverPage() {
   return (
-    <div className="page-content relative flex flex-col justify-start h-full" style={{ backgroundColor: '#080b12', color: '#ffffff', overflow: 'hidden' }}>
+    <div className="page-content flex flex-col h-full" style={{ backgroundColor: '#080b12', color: '#ffffff', overflow: 'hidden' }}>
       
-      {/* Background Noise / Film Grain for Print Texture */}
+      {/* Background Noise / Film Grain for Top Section */}
       <div style={{
         position: 'absolute',
-        inset: 0,
-        opacity: 0.25,
+        top: 0,
+        left: 0,
+        right: 0,
+        height: '55%',
+        opacity: 0.15,
         backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
         pointerEvents: 'none',
         zIndex: 2,
         mixBlendMode: 'overlay',
       }}></div>
 
-      {/* Cinematic Profile Image with fade-to-dark at the top */}
+      {/* Top Section - Typography (55% Height) */}
       <div style={{
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        height: '75%',
-        backgroundImage: 'url(/images/profile.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center 10%',
-        filter: 'grayscale(100%) contrast(1.15) brightness(0.85)',
-        WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 30%, black 100%)',
-        maskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 30%, black 100%)',
-        zIndex: 1,
-      }}></div>
+        height: '55%',
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '0 40px',
+        textAlign: 'center',
+        position: 'relative',
+        zIndex: 10,
+      }}>
+        <h2 style={{
+          fontFamily: 'var(--font-mono)',
+          fontSize: '9px',
+          letterSpacing: '6px',
+          color: 'var(--book-gold)',
+          textTransform: 'uppercase',
+          marginBottom: '20px',
+        }}>
+          A True Story
+        </h2>
 
-      {/* Dramatic Vignette */}
+        <h1 style={{
+          fontFamily: 'var(--font-display)',
+          fontSize: '52px',
+          fontWeight: '700',
+          lineHeight: '1.05',
+          letterSpacing: '-1px',
+          textTransform: 'uppercase',
+          color: '#ffffff',
+          marginBottom: '20px',
+        }}>
+          SUDHANSHU<br/>RAY
+        </h1>
+
+        <div style={{ width: '30px', height: '2px', background: 'var(--book-gold)', marginBottom: '20px' }}></div>
+
+        <p style={{
+          fontFamily: 'var(--font-serif)',
+          fontStyle: 'italic',
+          fontSize: '15px',
+          color: 'rgba(255,255,255,0.85)',
+          letterSpacing: '1px',
+        }}>
+          The Journey of a Developer
+        </p>
+      </div>
+
+      {/* Bottom Section - Image (45% Height) */}
       <div style={{
-        position: 'absolute',
-        inset: 0,
-        boxShadow: 'inset 0 0 120px rgba(0,0,0,0.9)',
-        pointerEvents: 'none',
-        zIndex: 3,
-      }}></div>
-
-      {/* Typography Content Layer */}
-      <div className="relative z-10 w-full h-full flex flex-col justify-between px-10 pt-16 pb-12 text-center">
+        height: '45%',
+        width: '100%',
+        position: 'relative',
+        borderTop: '2px solid var(--book-gold)',
+      }}>
+        {/* Full-width framed image */}
+        <img 
+          src="/images/profile.png" 
+          alt="Sudhanshu Ray"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center 20%', /* Focuses on the face for portraits */
+            filter: 'grayscale(100%) contrast(1.1) brightness(0.9)',
+          }}
+        />
         
-        {/* Top Typography (Autobiography Style) */}
-        <div>
-          <h2 style={{
+        {/* Bestseller Badge Overlaid on Image */}
+        <div style={{
+          position: 'absolute',
+          bottom: '24px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          background: '#080b12',
+          padding: '10px 18px',
+          border: '1px solid var(--book-gold)',
+          borderRadius: '4px',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.5)',
+        }}>
+          <p style={{
             fontFamily: 'var(--font-mono)',
-            fontSize: '9px',
-            letterSpacing: '8px',
+            fontSize: '8px',
+            letterSpacing: '3px',
             color: 'var(--book-gold)',
             textTransform: 'uppercase',
-            marginBottom: '24px',
-            opacity: 0.9,
+            whiteSpace: 'nowrap',
           }}>
-            A True Story
-          </h2>
-
-          <h1 style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: '64px',
-            fontWeight: '700',
-            lineHeight: '0.85',
-            letterSpacing: '-2px',
-            textTransform: 'uppercase',
-            color: '#ffffff',
-            marginBottom: '18px',
-            textShadow: '0 10px 40px rgba(0,0,0,0.9), 0 2px 10px rgba(0,0,0,0.5)',
-          }}>
-            SUDHANSHU<br/>RAY
-          </h1>
-
-          <p style={{
-            fontFamily: 'var(--font-serif)',
-            fontStyle: 'italic',
-            fontSize: '16px',
-            color: 'rgba(255,255,255,0.85)',
-            letterSpacing: '1.5px',
-            textShadow: '0 4px 16px rgba(0,0,0,0.9)',
-          }}>
-            The Journey of a Developer
+            #1 Portfolio Bestseller
           </p>
         </div>
-
-        {/* Bottom Accent */}
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '12px',
-          marginTop: 'auto',
-        }}>
-          {/* Gold Divider */}
-          <div style={{ width: '40px', height: '1.5px', background: 'var(--book-gold)', marginBottom: '4px', boxShadow: '0 2px 4px rgba(0,0,0,0.5)' }}></div>
-          
-          <p style={{
-            fontFamily: 'var(--font-mono)',
-            fontSize: '9px',
-            letterSpacing: '5px',
-            color: 'rgba(255,255,255,0.7)',
-            textTransform: 'uppercase',
-            lineHeight: '1.8',
-            textShadow: '0 2px 4px rgba(0,0,0,0.8)',
-          }}>
-            #1 Portfolio Bestseller<br/>
-            Full Stack Engineering
-          </p>
-        </div>
-
       </div>
 
     </div>
